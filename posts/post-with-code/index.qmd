@@ -1,6 +1,6 @@
 ---
-title: "Post With Code"
-author: "Harlow Malloc"
+title: "Welcome To My Blog"
+author: "Ida Siting ASSINE"
 date: "2023-02-22"
 categories: [news, code, analysis]
 image: "image.jpg"
@@ -9,5 +9,12 @@ image: "image.jpg"
 This is a post with executable code.
 
 ```{r}
-1 + 1
+## Librairie heron
+# le package heron permet de calculer l'aire d'un triangle 
+# remotes::install_github("idasitingassine/my_blog")
+```
+
+```{r}
+library(targets)
+targets::tar_make()
 ```
