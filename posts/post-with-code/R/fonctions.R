@@ -30,12 +30,12 @@ divide_triangle <- function(xA,yA,xB,yB,xC,yC){
   xO <- mid(xA,xB); yO <- mid(yA,yB)
   xP <- mid(xB,xC); yP <- mid(yB,yC)
   xQ <- mid(xA,xC); yQ <- mid(yA,yC)
-  triangle_interieur <- c(xO,yO,xP,yP,xQ,yQ)
+ # triangle_interieur <- c(xO,yO,xP,yP,xQ,yQ)
   triangle1 <- c(xA,yA,xO,yO,xQ,yQ)
   triangle2 <- c(xO,yO,xB,yB,xP,yP)
   triangle3 <- c(xC,yC,xP,yP,xQ,yQ)
   
-  liste <-list(triangle_interieur,triangle1,triangle2,triangle3)
+  liste <-list(triangle1,triangle2,triangle3)
   
   return(liste)
   
@@ -55,10 +55,10 @@ divide_list_triangle <- function(liste){
   total_air <- 0
   for (i in 1:length(liste)){
     xA <- liste[[i]][1]; yA <- liste[[i]][2]; xB <- liste[[i]][3]; yB <- liste[[i]][4]; xC <- liste[[i]][5]; yC <- liste[[i]][6]
-    h[[i]] <- divide_tiangle(xA,yA,xB,yB,xC,yC)
+    h[[i]] <- divide_triangle(xA,yA,xB,yB,xC,yC)
    
      plot_triangle(xA,yA,xB,yB,xC,yC)
-    somme_air <- total_air +air_total_tiangle(xA,yA,xB,yB,xC,yC)
+    somme_air <- total_air +air_total_triangle(xA,yA,xB,yB,xC,yC)
   }
   liste <- list(h,somme_air)
   return(liste)
@@ -99,10 +99,10 @@ plot_triangle <- function(xA,yA,xB,yB,xC,yC){
 }
 
 
-air_total_tiangle <- function(xA,yA,xB,yB,xC,yC){
+air_total_triangle <- function(xA,yA,xB,yB,xC,yC){
   AB=sqrt((xB-xA)^2+(yB-yA)^2)
   BC=sqrt((xC-xB)^2+(yC-yB)^2)
   AC=sqrt((xC-xA)^2+(yC-yA)^2)
-  return(air_triangle(AB,BC,AC))
+  return(heron(AB,BC,AC))
   
 }

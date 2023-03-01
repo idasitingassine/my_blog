@@ -1,0 +1,14 @@
+{
+  "hash": "8e9d2aca596bb1b5bd8225cffebfd064",
+  "result": {
+    "markdown": "---\ntitle: \"Welcome To My Blog\"\nauthor: \"Ida Siting ASSINE\"\ndate: \"2023-02-22\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n## Librairie heron\n# le package heron permet de calculer l'aire d'un triangle \n# remotes::install_github(\"idasitingassine/my_blog\")\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(targets)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: le package 'targets' a été compilé avec la version R 4.2.2\n```\n:::\n\n```{.r .cell-code}\nlibrary(quarto)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: le package 'quarto' a été compilé avec la version R 4.2.2\n```\n:::\n\n```{.r .cell-code}\nlibrary(heron)\ntargets::tar_make()\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n✔ skip target catalogue\n✔ skip target figure\n✔ skip target memo\n✔ skip pipeline [0.23 seconds]\nMessage d'avis :\nle package 'targets' a été compilé avec la version R 4.2.2 \n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ntar_meta(fields = warnings, complete_only = TRUE)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 1 × 2\n  name      warnings                                               \n  <chr>     <chr>                                                  \n1 catalogue le package quarto a été compilé avec la version R 4.2.2\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ntargets::tar_make()\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n✔ skip target catalogue\n✔ skip target figure\n✔ skip target memo\n✔ skip pipeline [0.33 seconds]\nMessage d'avis :\nle package 'targets' a été compilé avec la version R 4.2.2 \n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

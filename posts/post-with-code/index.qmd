@@ -16,5 +16,18 @@ This is a post with executable code.
 
 ```{r}
 library(targets)
+library(quarto)
+library(heron)
 targets::tar_make()
 ```
+
+```{r}
+tar_meta(fields = warnings, complete_only = TRUE)
+
+```
+```{r}
+targets::tar_make()
+```
+
+
+

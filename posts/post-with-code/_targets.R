@@ -3,7 +3,7 @@ library(targets)
 
 source("R/fonctions.R")
 
-tar_option_set(packages <- c("heron","quarto","targets"))
+tar_option_set(packages = c("heron","quarto","targets"))
 
 
 
