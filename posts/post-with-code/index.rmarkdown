@@ -1,0 +1,59 @@
+---
+title: "Welcome To My Blog"
+author: "Ida Siting ASSINE"
+date: "2023-02-22"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+
+This is a post with executable code.
+
+
+```{r}
+## Librairie heron
+# le package heron permet de calculer l'aire d'un triangle 
+# remotes::install_github("idasitingassine/my_blog")
+```
+
+```{r}
+library(targets)
+library(quarto)
+library(heron)
+targets::tar_make()
+```
+
+```{r}
+tar_meta(fields = warnings, complete_only = TRUE)
+
+```
+
+```{r}
+targets::tar_make()
+```
+
+```{r}
+targets::tar_visnetwork()
+```
+
+```{r}
+targets::tar_read("catalogue")
+```
+
+```{r}
+targets::tar_load("catalogue")
+```
+
+```{r}
+install.packages("tarchetypes")
+library(tarchetypes)
+```
+
+```{r}
+tarchetypes::tar_quarto("render")
+```
+
+```{r}
+targets::tar_make()
+```
+

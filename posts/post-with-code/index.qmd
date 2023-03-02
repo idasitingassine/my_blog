@@ -25,9 +25,31 @@ targets::tar_make()
 tar_meta(fields = warnings, complete_only = TRUE)
 
 ```
+
 ```{r}
 targets::tar_make()
 ```
 
+```{r}
+targets::tar_visnetwork()
+```
+```{r}
+targets::tar_read("catalogue")
+```
 
+```{r}
+targets::tar_load("catalogue")
+```
+
+```{r}
+install.packages("tarchetypes")
+library(tarchetypes)
+```
+```{r}
+tarchetypes::tar_quarto("render")
+```
+
+```{r}
+targets::tar_make()
+```
 
